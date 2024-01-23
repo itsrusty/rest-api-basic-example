@@ -6,13 +6,13 @@ import morgan from "morgan"
 dotenv.config()
 const app = express()
 
-// middleware
+// todo: middleware
 app.use(express.json())
+app.use(morgan("dev"))
 
 // todo: endpoints aqui 
 app.use(routerProduct)
 
-app.use(morgan("dev"))
 
 // todo: run server!
 const bootstrap = () => {
